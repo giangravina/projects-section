@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Projects Section</title>
+      <link rel="stylesheet" href="styles.css">
+      <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+      <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+      <script src="./scripts/jquery-3.5.1.min.js"></script>
+      <script src="./scripts/typed.js"></script>
+</head>
+<body>
+      <div class="wrapper">
+            <nav class="navBar">
+                  <a href="#">
+                        <img src="./assets/logo.png" alt="logo">
+                  </a>
+                  <a href="#">
+                        <img src="./assets/menu.png" alt="menu-btn">
+                  </a>
+            </nav>
+
+            <header>
+                  <div class="text-body anim">
+                  <h1><span class="typing"></span></h1>
+            </div>
+                  <p class="anim">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse illum commodi aperiam! In quo enim esse, tenetur. Ab voluptatem alias aliquid harum corporis quos, pariatur libero ex ipsam beatae eius.</p>
+            </header>
+
+            <div class="work">
+                  <img class="anim" src="./assets/project1.jpg" alt="project img">
+                  <img class="anim" src="./assets/project2.jpg" alt="project img">
+                  <img class="anim" src="./assets/project3.jpg" alt="project img">
+                  <img class="anim" src="./assets/project4.jpg" alt="project img">
+            </div>
+
+            <div class="header2 anim">
+                  <div class="text-body anim">
+                        <h1>Professional <span class="shopify"></span></h1>
+                  </div>
+                  <p class="anim">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus sit necessitatibus, eos minima odio, ea ipsam, dicta nihil praesentium soluta fugit aspernatur nisi enim libero quos omnis? Optio suscipit quibusdam incidunt maiores repudiandae laudantium eaque, obcaecati totam architecto aut ab?</p>
+            </div>
+
+            <div class="work">
+                  <img class="anim" src="./assets/project5.jpg" alt="project img">
+                  <img class="anim" src="./assets/project6.jpg" alt="project img">
+            </div>
+
+            <footer>
+            </footer>
+      </div>
+
+      <script type="text/javascript">
+
+            window.sr = ScrollReveal();
+            sr.reveal('.anim');
+
+            var typed = new Typed('.typing', {
+            strings: ["<u>Software</u> Development.", "<u>Web</u> Design."],
+            loop: true,
+            typeSpeed: 100,
+            backspeed: 40,
+            });
+
+            var typed = new Typed('.shopify', {
+            strings: ["<u>Shopify</u> Development.", "<u>Shopify</u> Consulting.", "Brand Development.", "<u>E-Commerce Solutions<u>"],
+            loop: true,
+            typeSpeed: 100,
+            backspeed: 40,
+            });
+
+      </script>
+
+</body>
+</html>
