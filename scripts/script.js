@@ -1,11 +1,8 @@
-var i=0, text;
-text = "welcome to my page"
+/* nav */
 
-function typing() {
-    if(i<text.length) {
-        document.getElementById("text").innerHTML += text.charAT(i);
-        i++;
-        setTimeout(typing, 50);
-    }
-}
-typing();
+const hamburger_menu = document.querySelector(".hamburger-menu");
+const container = document.querySelecter("container");
+
+hamburger_menu.addEventListener("click", () => {
+        container.classList.toggle("active");
+})
