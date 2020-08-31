@@ -7,47 +7,56 @@
       <title>Projects Section</title>
       <link rel="stylesheet" href="styles.css">
       <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-      <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
-      <script src="./scripts/jquery-3.5.1.min.js"></script>
-      <script src="./scripts/typed.js"></script>
-      <script src="./scripts/script.js"></script>
 
 </head>
 <body>
-      <div class="wrapper">
-            <nav class="navBar">
-                  <a href="#">
-                        <img src="logo.png" alt="logo">
-                  </a>
-                  <!-- <a href="#" >
-                        <img src="menu.png" alt="menu-btn">
-                  </a> -->
+    <!-- Nav Section -->
+
+    <header>
+        <div class="container">
+            <nav class="nav">
+                <ul class="nav-list nav-list-mobile">
+                    <li class="nav-item">
+                        <div class="mobile-menu">
+                            <span class="line line-top"></span>
+                            <span class="line line-bottom"></span>
+                        </div>
+                    </li>
+                </ul>
+                <!-- End Nav Mobile -->
+                <ul class="nav-list nav-list-desktop">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link nav-link">portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link nav-link">resume</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link nav-link">contact</a>
+                    </li>
+                </ul>
+                <!-- End Nav Desktop -->
             </nav>
+        </div>
+    </header>
 
-            <div class="menu-wrap">
-                  <input type="checkbox" class="toggler">
-                  <div class="hamburger"><div></div></div>
-                  <div class="menu">
-                    <div>
-                      <div>
-                        <ul>
-                          <li><a href="/">Home</a></li>
-                          <li><a href="about.html">About</a></li>
-                          <li><a href="projects.html">Portfolio</a></li>
-                          <li><a href="#">Contact</a></li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div> 
+    <!-- End Nav Section -->
 
-            
-            <header>
-                  <div class="text-body anim">
-                  <h1><span class="typing"></span></h1>
+
+    <!--  Projects -->
+
+
+      <div class="wrapper"> 
+
+        <div class="header2 anim">
+            <div class="text-body anim">
+                <h1><span class="typing"></span></h1>
             </div>
-                  <p class="anim">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse illum commodi aperiam! In quo enim esse, tenetur. Ab voluptatem alias aliquid harum corporis quos, pariatur libero ex ipsam beatae eius.</p>
-            </header>
+                <p class="anim">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse illum commodi aperiam! In quo enim esse, tenetur. Ab voluptatem alias aliquid harum corporis quos, pariatur libero ex ipsam beatae eius.</p>
+        </div>
 
             <div class="work">
                   <img class="anim" src="./assets/project1.jpg" alt="project img">
@@ -67,6 +76,13 @@
                   <img class="anim" src="./assets/project5.jpg" alt="project img">
                   <img class="anim" src="./assets/project6.jpg" alt="project img">
             </div>
+        </div>
+
+        <!-- End Projects -->
+
+
+
+        <!-- Footer -->
 
             <footer>
                   <div class='footer-container'>
@@ -87,41 +103,37 @@
                     </section>
                 </div>
             </footer>
-      </div>
 
-      <script type="text/javascript">
+         <!-- End Footer -->
 
-            /* Type JS */
+         <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+         <script src="./scripts/jquery-3.5.1.min.js"></script>
+         <script src="./scripts/typed.js"></script>
+         <script src="./scripts/script.js"></script>
 
-            window.sr = ScrollReveal();
-            sr.reveal('.anim');
 
-            var typed = new Typed('.typing', {
-            strings: ["<u>Software</u> Development.", "<u>Web</u> Design."],
-            loop: true,
-            typeSpeed: 100,
-            backspeed: 40,
-            });
+        <script type="text/javascript">
 
-            var typed = new Typed('.shopify', {
-            strings: ["<u>Shopify</u> Stores.", "<u>Shopify</u> Consulting.", "Brand Development.", "<u>E-Commerce Solutions<u>"],
-            loop: true,
-            typeSpeed: 100,
-            backspeed: 40,
-            });
+                /* Type JS */
 
-            /* Nav JS */
+                window.sr = ScrollReveal();
+                sr.reveal('.anim');
 
-            function myFunction() {
-            var x = document.getElementById("myLinks");
-            if (x.style.display === "block") {
-            x.style.display = "none";
-            } else {
-            x.style.display = "block";
-            }
-            }
+                var typed = new Typed('.typing', {
+                strings: ["<u>Software</u> Development.", "<u>Web</u> Design.", "<u>Quality</u> Assurance."],
+                loop: true,
+                typeSpeed: 100,
+                backspeed: 40,
+                });
 
-      </script>
+                var typed = new Typed('.shopify', {
+                strings: ["<u>Shopify</u> Stores.", "<u>Shopify</u> Consulting.", "Brand Development.", "<u>E-Commerce Solutions<u>"],
+                loop: true,
+                typeSpeed: 100,
+                backspeed: 40,
+                });
+
+        </script>
 
 </body>
 </html>

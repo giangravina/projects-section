@@ -1,8 +1,8 @@
-/* nav */
+/* NAV */
 
-const hamburger_menu = document.querySelector(".hamburger-menu");
-const container = document.querySelecter("container");
 
-hamburger_menu.addEventListener("click", () => {
-        container.classList.toggle("active");
-})
+const selectElement = (element) => document.querySelector(element);
+
+selectElement('.mobile-menu').addEventListener('click', () => {
+    selectElement('header').classList.toggle('active');
+});
