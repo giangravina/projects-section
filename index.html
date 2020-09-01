@@ -9,28 +9,226 @@
       <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
       <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
+
+      <style>
+
+        ::before,
+        ::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            box-sizing: border-box;
+        }
+
+        img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+        }
+
+
+        section {
+            padding: 5rem 0;
+        }
+        .hero {
+            width: 100%;
+            height: 70vh;
+            background: linear-gradient(135deg, rgba(2, 0, 36, 1) 0%, rgba(16, 74, 83, 0.8) 100%), url("./assets/pineapple.jpg") no-repeat fixed;
+            background-size: cover;
+            position: relative;
+        }
+
+        .hero::before{
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 2.7rem;
+            background: url("./assets/wave_small_one.png") center no-repeat;
+            background-size: cover;
+        }
+
+        .main-message {
+            width: 100%;
+            max-width: 50rem;
+            color: #eee;
+            text-transform: capitalize;
+            transform: translateY(50%);
+        }
+
+        .main-message h3 {
+            font-size: 1.6rem;
+        }
+
+        .main-message h1 {
+            font-size: 4rem;
+            margin-top: 1rem 0;
+        }
+
+        .main-message p {
+            text-transform: lowercase;
+        }
+
+        .button {
+            background-color: #ebc48c;
+            border-radius: 2rem;
+            color: #eee;
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 1rem 2.5rem;
+            text-transform: uppercase;
+            transition: background-color 650ms;
+        }
+
+        .button:hover {
+            background-color: #ce587b;
+        }
+
+        .experience {
+            padding: 5rem 0 0 0;
+        }
+
+        .title-heading {
+            text-align: center;
+            transform: uppercase;
+            margin-bottom: 5rem;
+            color: #eee;
+        }
+
+        .title-heading h3 {
+            font-size: 1.4rem;
+        }
+
+        .title-heading h1 {
+            font-size: 2rem;
+            margin: .5rem 0 1rem;
+        }
+
+        .title-heading p {
+            text-transform: lowercase;
+        }
+
+        .services-grid {
+            display: grid;
+            /* padding: 0 7.5rem; */
+            grid-gap: 20px;
+            grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+        }
+
+        .services-grid-item {
+            height: 10rem;
+            padding: 5rem;
+            color: #eee;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 1;
+        }
+
+        .services-grid-item h1 {
+            font-size: 2rem;
+        }
+
+        .services-grid-item p {
+            font-size: 12px;
+        }
+
+        .services-grid-item::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(2, 0, 36, 1) 0%, rgba(16, 74, 83, 0.8) 100%);
+            z-index: -1;
+
+        }
+
+        .star-gazing {
+            background: url("./assets/project1.jpg");
+        }
+
+        .hiking {
+            background: url("./assets/project2.jpg");
+        }
+
+        .camping {
+            background: url("./assets/project3.jpg");
+        }
+
+        .services-grid-item i {
+            font-size: 4rem;
+            color: #eee;
+        }
+
+        .services-grid-item h1 {
+            font-size: 1.7rem;
+            text-transform: uppercase;
+            margin: 2rem 0;
+        }
+
+        /* media */
+
+        @media screen and (min-width: 470px) {
+            .hero::before {
+                height: 9.4rem;
+                background: url("./assets/wave_medium.png") center no-repeat;
+                background-size: cover;
+            }
+        }
+
+        @media screen and (min-width: 950px){
+            .hero::before {
+                height: 10.7rem;
+                background: url("./assets/wave_large.png") center no-repeat;
+                background-size: cover;
+            }
+        }
+
+        @media screen and (min-width: 950px){
+            .hero {
+                height: 60vh;
+            }
+            .main-message {
+                transform: translateY(70%);
+            }
+            .experience {
+                padding: 0;
+            }
+        }
+
+    </style>
 </head>
+
+
 <body>
     <!-- Nav Section -->
-
     <header>
-        <div class="container">
             <nav class="nav">
+                <div class="container">
                 <ul class="nav-list nav-list-mobile">
                     <li class="nav-item">
                         <div class="mobile-menu">
                             <span class="line line-top"></span>
                             <span class="line line-bottom"></span>
                         </div>
+                    </div>
                     </li>
                 </ul>
                 <!-- End Nav Mobile -->
+                <div class="container">
                 <ul class="nav-list nav-list-desktop">
                     <li class="nav-item">
-                        <a href="#" class="nav-link">home</a>
+                        <a href="index.html" class="nav-link">home</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link nav-link">portfolio</a>
+                        <a href="projects.html" class="nav-link nav-link">portfolio</a>
                     </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link nav-link">resume</a>
@@ -39,180 +237,66 @@
                         <a href="#" class="nav-link nav-link">contact</a>
                     </li>
                 </ul>
+                </div>
                 <!-- End Nav Desktop -->
             </nav>
-        </div>
     </header>
 
     <!-- End Nav Section -->
 
+    <!-- Hero -->
 
-    <!--  Projects -->
-
-
-      <div class="wrapper"> 
-          
-
-        <div class="header2 anim">
-            <div class="text-body anim">
-                <h1><span class="typing"></span></h1>
-            </div>
+    <section class="hero anim">
+        <div class="container">
+            <div class="main-message">
+                <h3>Software Development & Web Design</h3>
+                <h1>Solutions.</h1>
                 <p class="anim">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse illum commodi aperiam! In quo enim esse, tenetur. Ab voluptatem alias aliquid harum corporis quos, pariatur libero ex ipsam beatae eius.</p>
-        </div>
-
-        <div class="projects anim">
-            <div class="item anim">
-                <a href="#!">
-                    <img src="./assets/project1.jpg"
-                    alt="project">
-                </a>
-                <a href="#" class="btn-light">
-                    <i class="fas fa-eye"> Project</i>
-                </a>
-                <a href="#" class="btn-dark">
-                    <i class="fab fa-github"> Github</i>
-                </a>
-            </div>
-            <div class="item anim">
-                <a href="#!">
-                    <img src="./assets/project2.jpg"
-                    alt="project">
-                </a>
-                <a href="#" class="btn-light">
-                    <i class="fas fa-eye"> Project</i>
-                </a>
-                <a href="#" class="btn-dark">
-                    <i class="fab fa-github"> Github</i>
-                </a>
-            </div>
-            <div class="item anim">
-                <a href="#!">
-                    <img src="./assets/project3.jpg"
-                    alt="project">
-                </a>
-                <a href="#" class="btn-light">
-                    <i class="fas fa-eye"> Project</i>
-                </a>
-                <a href="#" class="btn-dark">
-                    <i class="fab fa-github"> Github</i>
-                </a>
-            </div>
-            <div class="item anim">
-                <a href="#!">
-                    <img src="./assets/project4.jpg"
-                    alt="project">
-                </a>
-                <a href="#" class="btn-light">
-                    <i class="fas fa-eye"> Project</i>
-                </a>
-                <a href="#" class="btn-dark">
-                    <i class="fab fa-github"> Github</i>
-                </a>
+                <div class="learn_more">
+                    <a href="" class="button">Explore Projects</a>
+                </div>
             </div>
         </div>
+    </section>
 
-        <div class="header2 anim">
-            <div class="text-body anim">
-                <h1><span class="shopify"></span></h1>
-            </div>
-                <p class="anim">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse illum commodi aperiam! In quo enim esse, tenetur. Ab voluptatem alias aliquid harum corporis quos, pariatur libero ex ipsam beatae eius.</p>
-        </div>
+    <!-- End Hero -->
 
-      <div class="projects anim">
-        <div class="item anim">
-            <a href="#!">
-                <img src="./assets/project1.jpg"
-                alt="project">
-            </a>
-            <a href="#" class="btn-light">
-                <i class="fas fa-eye"> Project</i>
-            </a>
-            <a href="#" class="btn-dark">
-                <i class="fab fa-github"> Github</i>
-            </a>
-        </div>
-        <div class="item anim">
-            <a href="#!">
-                <img src="./assets/project2.jpg"
-                alt="project">
-            </a>
-            <a href="#" class="btn-light">
-                <i class="fas fa-eye"> Project</i>
-            </a>
-            <a href="#" class="btn-dark">
-                <i class="fab fa-github"> Github</i>
-            </a>
-        </div>
-        <div class="item anim">
-            <a href="#!">
-                <img src="./assets/project3.jpg"
-                alt="project">
-            </a>
-            <a href="#" class="btn-light">
-                <i class="fas fa-eye"> Project</i>
-            </a>
-            <a href="#" class="btn-dark">
-                <i class="fab fa-github"> Github</i>
-            </a>
-        </div>
-        <div class="item anim">
-            <a href="#!">
-                <img src="./assets/project4.jpg"
-                alt="project">
-            </a>
-            <a href="#" class="btn-light">
-                <i class="fas fa-eye"> Project</i>
-            </a>
-            <a href="#" class="btn-dark">
-                <i class="fab fa-github"> Github</i>
-            </a>
-        </div>
-    </div>
+    <!-- Services -->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <!-- <div class="work">
-                  <img class="anim" src="./assets/project1.jpg" alt="project img">
-                  <img class="anim" src="./assets/project2.jpg" alt="project img">
-                  <img class="anim" src="./assets/project3.jpg" alt="project img">
-                  <img class="anim" src="./assets/project4.jpg" alt="project img">
+    <section class="experience anim">
+        <div class="container">
+            <div class="title-heading">
+                <h3>Services</h3>
+                <h1>My Services</h1>
+                <p class="anim">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse illum commodi aperiam! In quo enim esse, tenetur.</p>
             </div>
 
-            <div class="header2 anim">
-                  <div class="text-body anim">
-                        <h1 class="">Professional <span class="shopify"></span></h1>
-                  </div>
-                  <p class="anim">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus sit necessitatibus, eos minima odio, ea ipsam, dicta nihil praesentium soluta fugit aspernatur nisi enim libero quos omnis? Optio suscipit quibusdam incidunt maiores repudiandae laudantium eaque, obcaecati totam architecto aut ab?</p>
+            <div class="services-grid anim">
+                <div class="services-grid-item star-gazing">
+                    <i class="fab fa-facebook-f">
+                        <h1>Service 1</h1>
+                        <p class="anim">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse illum commodi aperiam! In quo enim esse, tenetur. Ab voluptatem alias aliquid harum corporis quos, pariatur libero ex ipsam beatae eius.</p>
+                    </i>
+                </div>
+                <div class="services-grid-item hiking anim">
+                    <i class="fab fa-facebook-f">
+                        <h1>Service 2</h1>
+                        <p class="anim">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse illum commodi aperiam! In quo enim esse, tenetur. Ab voluptatem alias aliquid harum corporis quos, pariatur libero ex ipsam beatae eius.</p>
+                    </i>
+                </div>
+                <div class="services-grid-item camping anim">
+                    <i class="fab fa-facebook-f">
+                        <h1>Service 3</h1>
+                        <p class="anim">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse illum commodi aperiam! In quo enim esse, tenetur. Ab voluptatem alias aliquid harum corporis quos, pariatur libero ex ipsam beatae eius.</p>
+                    </i>
+                </div>
             </div>
-
-            <div class="work">
-                  <img class="anim" src="./assets/project5.jpg" alt="project img">
-                  <img class="anim" src="./assets/project6.jpg" alt="project img">
-            </div> -->
-
-
         </div>
+    </section>
+</div>
 
-        
 
-        
-
-        <!-- End Projects -->
+    <!-- End Services -->
 
 
 
