@@ -25,7 +25,7 @@ body {
 .wrapper {
       width: 90%;
       margin: 0 auto;
-      padding-top: 10%;
+      padding-top: 2rem;
 }
 
 h1 {
@@ -486,4 +486,50 @@ header {
     }
   }
 
+}
+
+
+.projects {
+  display: grid;
+  padding: 0 2.5rem;
+  grid-gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.projects img {
+  width: 100%;
+}
+
+.btn {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem;
+}
+
+.btn-dark {
+  background: #1a2228;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem;
+}
+
+.btn-light {
+  background: #262335;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem;
+}
+
+.fas {
+  color: #eee;
+}
+
+.fab {
+  color: #eee;
+}
+
+@media screen and (max-width: 767px) {
+    .projects { grid-template-columns: 1fr;
+    }
 }
